@@ -2,33 +2,33 @@ package org.example;
 
 
 
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.IOException;
+import java.util.concurrent.atomic.AtomicReference;
 
 import static spark.Spark.*;
 
 public class SparkWebServer {
 
-    public static void main(String... args){
+    public static int count = 0;
+    static String[] ports = {"http://100.24.240.33:9001/mensajitos", "http://100.26.175.18:9001/mensajitos", "http://3.90.62.177:9001/mensajitos"};
+
+    public static void main(String... args) throws IOException {
         staticFileLocation("/public");
         port(9000);
 
-        before((request, response) -> {
-            String path = request.pathInfo();
-            if (path.endsWith(".html")) {
-                try {
-                    byte[] bytes = Files.readAllBytes(Paths.get("public/" + path));
-                    String content = new String(bytes, StandardCharsets.UTF_8);
-                    // Modificar el contenido del archivo
-                    //content = content.replace("9001", "9002");
-                    response.body(content);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-        });
+
+
+
+
 
         get("hello", (req,res) -> "Hellooooooo!");
+        post("guenas", (req,res) -> {
+            if (count> 2) {count = 0;}
+
+            String url = ports[count];
+            count += 1;
+           return  HTTPConnection.sendInfo(url) + url;
+        } );
+
     }
 }

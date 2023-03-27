@@ -1,6 +1,7 @@
 package org.example;
 
+
 public class RoundRobin {
-    private static int[] ports = new int[]{95001, 95002, 95003};
+    public static java.lang.String[] ports = new java.lang.String[]{"http://100.24.240.33:9001/mensajitos", "http://100.26.175.18:9001/mensajitos", "http://3.90.62.177:9001/mensajitos"};
 
 }

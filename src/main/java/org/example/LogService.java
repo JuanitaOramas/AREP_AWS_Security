@@ -19,7 +19,8 @@ public class LogService {
 
     public static void main(String[] args) {
         port(9001);
-        MongoClientURI uri = new MongoClientURI("mongodb://localhost:27017/testdb");
+        MongoClientURI uri = new MongoClientURI("mongodb://18.234.168.78:27017/testdb");
+
 
         MongoClient mongoClient = new MongoClient(uri);
 

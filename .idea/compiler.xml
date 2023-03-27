@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="AREPTaller5Docker" />
-        <module name="AREP_Tallerr_DockerAWS" />
+        <module name="AREP_Tallerr_DockerAWS - Copy" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,3 +1,5 @@
 org\example\App.class
+org\example\HTTPConnection.class
+org\example\RoundRobin.class
 org\example\SparkWebServer.class
 org\example\LogService.class
