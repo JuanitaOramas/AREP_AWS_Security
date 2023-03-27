@@ -20,11 +20,11 @@ import javax.net.ssl.TrustManagerFactory;
 
 public class URLReader {
 
-    public static void main(String[] args) {
+    public static String Reader(String certificatePath, String URLToRead) {
         try {
 
             // Create a file and a password representation
-            File trustStoreFile = new File("certificados/myTrustStore");
+            File trustStoreFile = new File(certificatePath);
             char[] trustStorePassword = "123456".toCharArray();
 
             // Load the trust store, the default type is "pkcs12", the alternative is "jks"
@@ -45,16 +45,16 @@ public class URLReader {
             }
 
             //Set the default global SSLContext so all the connections will use it
-//            SSLContext sslContext = SSLContext.getInstance("TLS");
-//            sslContext.init(null, tmf.getTrustManagers(), null);
-//            SSLContext.setDefault(sslContext);
+            SSLContext sslContext = SSLContext.getInstance("TLS");
+            sslContext.init(null, tmf.getTrustManagers(), null);
+            SSLContext.setDefault(sslContext);
 
             // We can now read this URL
-            readURL("https://localhost:5000/hello");
+            return readURL(URLToRead);
 
             // This one can't be read because the Java default truststore has been
             // changed.
-            readURL("https://www.google.com");
+            //readURL("https://www.google.com");
 
         } catch (KeyStoreException ex) {
             Logger.getLogger(URLReader.class.getName()).log(Level.SEVERE, null, ex);
@@ -68,12 +68,17 @@ public class URLReader {
             Logger.getLogger(URLReader.class.getName()).log(Level.SEVERE, null, ex);
 //        } catch (KeyManagementException ex) {
 //            Logger.getLogger(URLReader.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (KeyManagementException e) {
+            throw new RuntimeException(e);
         }
+        return null;
 
     }
 
-    public static void readURL(String sitetoread) {
+    public static String readURL(String sitetoread) {
+        StringBuilder builder = null;
         try {
+            builder = new StringBuilder();
             // Crea el objeto que representa una URL2
             URL siteURL = new URL(sitetoread);
             // Crea el objeto que URLConnection
@@ -104,9 +109,10 @@ public class URLReader {
             String inputLine = null;
             while ((inputLine = reader.readLine()) != null) {
                 System.out.println(inputLine);
+                builder.append(inputLine);
             }
         } catch (IOException x) {
             System.err.println(x);
-        }
+        } return builder.toString();
     }
 }

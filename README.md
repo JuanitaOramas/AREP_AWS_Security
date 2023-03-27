@@ -1,19 +1,22 @@
 # Taller Docker AWS
 
-## TALLER DE DE MODULARIZACIÓN CON VIRTUALIZACIÓN E INTRODUCCIÓN A DOCKER Y A AWS
+## APLICACIÓN DISTRIBUIDA SEGURA EN TODOS SUS FRENTES
 
 ## Author
 
 **Maria Juanita Oramas Bermudez**
 
 ---
+Aplicación Web segura con los siguientes requerimientos:
 
+Debe permitir un acceso seguro desde el browser a la aplicación. Es decir debe garantizar autenticación, autorización e integridad de usuarios.
+Debe tener al menos dos computadores comunicacndose entre ellos y el acceso de servicios remotos debe garantizar: autenticación, autorización e integridad entre los servicios. Nadie puede invocar los servicios si no está autorizado.
+Explique como escalaría su arquitectura de seguridad para incorporar nuevos servicios.
 
-
-El taller consiste en crear una aplicación web pequeña usando el micro-framework de Spark java (http://sparkjava.com/). Una vez tengamos esta aplicación procederemos a construir un container para docker para la aplicación y los desplegaremos y configuraremos en nuestra máquina local. Luego, cerremos un repositorio en DockerHub y subiremos la imagen al repositorio. Finalmente, crearemos una máquina virtual de en AWS, instalaremos Docker , y desplegaremos el contenedor que acabamos de crear.
+---
 
 Arquitectura:
-![img.png](img/img.png)
+![img_5.png](img_5.png)
 
 
 ### Instrucciones de uso
@@ -44,7 +47,7 @@ Se debe verificar las versiones:
 Java - Desarrollo (backend)
 git - Sistema de control de versiones
 maven - Administrador de dependencias
-Docker - Docker version 4.0.1
+
 
 ```
 
@@ -62,8 +65,8 @@ git clone
 
 Para la compilación del proyecto se usa el comando:
 ```
-mvn clean
-mvn install
+mvn clean  install
+
 ```
 
 Para visualizar de la aplicación  *http://localhost:35000* desde un navegador web.
@@ -72,48 +75,49 @@ Para visualizar de la aplicación  *http://localhost:35000* desde un navegador w
 ## Diseño
 Arquitectura cliente/servidor el cual realiza peticiones a una API que implementa el algoritmo RoundRobin.
 
-### Docker
-Para la creación de la imagen el archivo (Dockerfile) y con el siguiente comando construirla
-```
-docker build --tag dockersparkprimer .
-```
-para verificarla 
-
-```
-docker images
-```
-Se crean los contenedores y se verifican que esten corriendo con el comando
-
-```
-docker ps
-```
 
 ### AWS
 Creamos una instancia de Ec2
 ![img_3.png](img/img_3.png)
 
-Instalamos docker con 
+### Para instalar Java 
 ```
 sudo yum update -y
-sudo yum install docker
+wget https://download.oracle.com/java/17/latest/jdk-17_linux-x64_bin.rpm
+sudo rpm -i jdk-17_linux-x64_bin.rpm
 ```
-E iniciamos el servicio con
+Para verificar correcta instalacion
 ```
-sudo service docker start
+java -version
+
 ```
+
+Para este caso, se utilizaron los siguientes comandos para la configuracion de los certificados
+
+```
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650 -ext san=dns:ec2-44-203-162-220.compute-1.amazonaws.com
+keytool -storetype PKCS12 -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer -ext san=dns:ec2-44-203-162-220.compute-1.amazonaws.com
+
+
+keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore2.p12 -validity 3650 -ext san=dns:ec2-184-73-127-250.compute-1.amazonaws.com
+keytool -storetype PKCS12 -export -keystore ./ecikeystore2.p12 -alias ecikeypair -file ecicert2.cer -ext san=dns:ec2-184-73-127-250.compute-1.amazonaws.com
+
+keytool -storetype PKCS12 -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore2.p12 -ext san=dns:ec2-44-203-162-220.compute-1.amazonaws.com
+
+keytool -storetype PKCS12 -import -file ./ecicert2.cer -alias secondCA -keystore myTrustStore.p12 -ext san=dns:ec2-184-73-127-250.compute-1.amazonaws.com
+```
+
 ---
-
 ## Resultados:
-Pruebas:
-![img_1.png](img/img_1.png)
-![img_4.png](img/img_4.png)
+### Video demostracion 
+https://youtu.be/tS4CASt_x8c
+### Funcionamiento:
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
+ Para la segunda: 
+![img_3.png](img_3.png)
+![img_4.png](img_4.png)
 
-En AWS:
-![img_2.png](img/img_2.png)
-
-Resultado Final:
-
-![img.png](img.png)
 
 ---
 

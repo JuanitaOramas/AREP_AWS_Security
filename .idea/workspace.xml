@@ -5,27 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e494900-aeec-44d9-8a17-2fb1a96bb75c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientHello.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ClientHello.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTTPConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HTTPConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HelloSecureServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ClientHello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HTTPConnection.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HelloSecureServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HelloSecureServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RoundRobin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/RoundRobin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SparkWebServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/SparkWebServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LogService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RoundRobin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/SparkWebServer.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/URLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/URLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/AREPTaller5Docker-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/AREPTaller5Docker-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/LogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/LogService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/RoundRobin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/RoundRobin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SparkWebServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/SparkWebServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/ClientHello.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/HTTPConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/HelloSecureServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/HelloSecureServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/LogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/RoundRobin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/SparkWebServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/URLReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/URLReader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-org.example.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-org.example.AppTest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/surefire-reports/org.example.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/org.example.AppTest.txt" afterDir="false" />
@@ -37,6 +42,12 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/HelloSecureServer.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/HelloSecureServer2.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/org/example/URLReader.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/public/index.html" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,14 +64,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="AREPTaller5Docker" />
@@ -85,6 +101,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679879596125</updated>
       <workItem from="1679879597494" duration="369000" />
+      <workItem from="1679880698796" duration="6562000" />
     </task>
     <servers />
   </component>
